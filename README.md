@@ -1,6 +1,7 @@
 ## Dockerfile to build micropython
 
-In progress
+To build (set `MICROPYTHON_RELEASE` to desired version as released on Micropython's Github):
 
-`git submodule init`
-`docker build  --file Dockerfile --output out .`
+`DOCKER_BUILDKIT=1 docker build --rm --build-arg MICROPYTHON_RELEASE=1.14 --file Dockerfile --output out .`
+
+Micropython for Unix will be in `out` dir.
